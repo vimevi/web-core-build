@@ -57,7 +57,7 @@ textarea:focus::placeholder {
     color: #1b1c21; }
   .modal-feedback__burger,
   .modal-call__burger {
-    background-image: url(/assets/images/aside/close.svg);
+    background-image: url(/dist/assets/aside/close.svg);
     width: 40px;
     height: 40px;
     z-index: 15; }
@@ -69,7 +69,7 @@ textarea:focus::placeholder {
     position: relative;
     font-weight: 700;
     border-radius: 20px;
-    padding: 10px 24px 10px 8px;
+    padding: 10px 10px 10px 8px;
     align-self: flex-end;
     width: 136px;
     border: none;
@@ -79,7 +79,7 @@ textarea:focus::placeholder {
     cursor: pointer; }
     .modal-feedback__btn::after,
     .modal-call__btn::after {
-      background-image: url(/assets/images/prices/dropdown.svg);
+      background-image: url(/dist/assets/prices/dropdown.svg);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: 50% 50%;

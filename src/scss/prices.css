@@ -81,7 +81,7 @@
     font-family: TT Lakes; }
     .prices__service-btn::after {
       content: '';
-      background-image: url(/assets/images/prices/dropdown.svg);
+      background-image: url(/dist/assets/prices/dropdown.svg);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: 50% 50%;
@@ -112,7 +112,7 @@
   display: block; }
   .prices__feedback::after {
     content: '';
-    background-image: url(/assets/images/prices/line.svg);
+    background-image: url(/dist/assets/prices/line.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;

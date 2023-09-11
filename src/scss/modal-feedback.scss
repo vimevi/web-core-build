@@ -44,8 +44,6 @@ textarea:focus::placeholder {
 				top: 132px;
 			}
 		}
-		.burger-svg {
-		}
 	}
 	&__one-line {
 		border: $top-border;
@@ -65,7 +63,7 @@ textarea:focus::placeholder {
 		color: rgba(27, 28, 33, 1);
 	}
 	&__burger {
-		background-image: url(/assets/images/aside/close.svg);
+		background-image: url(/dist/assets/aside/close.svg);
 		width: 40px;
 		height: 40px;
 		z-index: 15;
@@ -77,7 +75,7 @@ textarea:focus::placeholder {
 		position: relative;
 		font-weight: 700;
 		border-radius: 20px;
-		padding: 10px 24px 10px 8px;
+		padding: 10px 10px 10px 8px;
 		align-self: flex-end;
 		width: 136px;
 		border: none;
@@ -86,7 +84,7 @@ textarea:focus::placeholder {
 		transition: all 0.3s;
 		cursor: pointer;
 		&::after {
-			background-image: url(/assets/images/prices/dropdown.svg);
+			background-image: url(/dist/assets/prices/dropdown.svg);
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: 50% 50%;
@@ -102,8 +100,6 @@ textarea:focus::placeholder {
 	}
 }
 
-.burger-svg {
-}
 .warning {
 	font-weight: 500;
 	color: rgba(126, 126, 130, 1);
@@ -148,19 +144,11 @@ textarea:focus::placeholder {
 		&__title {
 			padding-top: 0;
 		}
-		&__one-line {
-		}
-		&__warning {
-		}
-		&__btn {
-		}
 		.line {
 			&::after {
 				top: 36px;
 			}
 		}
-	}
-	.warning {
 	}
 }
 @media (min-width: 1120px) {

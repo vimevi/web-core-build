@@ -136,25 +136,29 @@ button:hover {
 }
 
 .menu-svg {
-	background-image: url(/assets/images/header/menu.svg);
+	background-image: url(../../src/assets/images/header/menu.svg);
 }
 
 .call-svg {
-	background-image: url(/assets/images/header/call.svg);
+	background-image: url(../../src/assets/images/header/call.svg);
 }
+
 .chat-svg {
-	background-image: url(/assets/images/header/chat.svg);
+	background-image: url(../../src/assets/images/header/chat.svg);
 }
+
 .profile-svg {
 	margin-right: 8px;
-	background-image: url(/assets/images/header/profile.svg);
+	background-image: url(../../src/assets/images/header/profile.svg);
 }
+
 .repair-svg {
-	background-image: url(/images/header/repair.svg);
+	background-image: url(../../src/assets/images/header/repair.svg);
 	margin-left: 8px;
 }
+
 .checkout-svg {
-	background-image: url(/images/header/checkstatus.svg);
+	background-image: url(../../src/assets/images/header/checkstatus.svg);
 }
 .main__title {
 	font-size: 28px;
@@ -269,7 +273,7 @@ button:hover {
 
 .more-btn-text span::before {
 	content: '';
-	background-image: url(/assets/images/main/arrows.svg);
+	background-image: url(../../src/assets/images/main/arrows.svg);
 	position: absolute;
 	left: 7px;
 	top: 18px;
@@ -446,10 +450,10 @@ button:hover {
 		height: 40px;
 	}
 	.left-item .support-top__vector {
-		background-image: url(/assets/images/header/repair.svg);
+		background-image: url(../../src/assets/images/header/repair.svg);
 	}
 	.right-item .support-top__vector {
-		background-image: url(/assets/images/header/checkstatus.svg);
+		background-image: url(../../src/assets/images/header/checkstatus.svg);
 	}
 
 	/* Позиционирование кнопки заявки */
