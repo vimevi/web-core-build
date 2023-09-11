@@ -430,7 +430,7 @@ eval("module.exports = \"data:application/font-woff;charset=utf-8;base64, d09GRg
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"bac58fb56cb778869883.svg\";\n\n//# sourceURL=webpack://web-core-build/./dist/assets/aside/burger.svg?");
+eval("module.exports = __webpack_require__.p + \"66cc31aab0ddfd1c3197.svg\";\n\n//# sourceURL=webpack://web-core-build/./dist/assets/aside/burger.svg?");
 
 /***/ }),
 
@@ -441,7 +441,7 @@ eval("module.exports = __webpack_require__.p + \"bac58fb56cb778869883.svg\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"bac58fb56cb778869883.svg\";\n\n//# sourceURL=webpack://web-core-build/./dist/assets/aside/close.svg?");
+eval("module.exports = __webpack_require__.p + \"66cc31aab0ddfd1c3197.svg\";\n\n//# sourceURL=webpack://web-core-build/./dist/assets/aside/close.svg?");
 
 /***/ }),
 
@@ -452,7 +452,7 @@ eval("module.exports = __webpack_require__.p + \"bac58fb56cb778869883.svg\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"b06f375524a90db91a99.svg\";\n\n//# sourceURL=webpack://web-core-build/./dist/assets/aside/search.svg?");
+eval("module.exports = __webpack_require__.p + \"83f3e279e0f58942443b.svg\";\n\n//# sourceURL=webpack://web-core-build/./dist/assets/aside/search.svg?");
 
 /***/ }),
 
@@ -463,7 +463,7 @@ eval("module.exports = __webpack_require__.p + \"b06f375524a90db91a99.svg\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"99fc096228d962ef51a3.svg\";\n\n//# sourceURL=webpack://web-core-build/./dist/assets/brands/dropdowns.svg?");
+eval("module.exports = __webpack_require__.p + \"660e381a3f27faa66c76.svg\";\n\n//# sourceURL=webpack://web-core-build/./dist/assets/brands/dropdowns.svg?");
 
 /***/ }),
 
@@ -474,7 +474,7 @@ eval("module.exports = __webpack_require__.p + \"99fc096228d962ef51a3.svg\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"ef683bf3ea20fcdc955e.svg\";\n\n//# sourceURL=webpack://web-core-build/./dist/assets/main/arrows.svg?");
+eval("module.exports = __webpack_require__.p + \"d11d607d2acc71c45d35.svg\";\n\n//# sourceURL=webpack://web-core-build/./dist/assets/main/arrows.svg?");
 
 /***/ }),
 
@@ -485,7 +485,7 @@ eval("module.exports = __webpack_require__.p + \"ef683bf3ea20fcdc955e.svg\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"1acef0d8726cc778d36d.svg\";\n\n//# sourceURL=webpack://web-core-build/./dist/assets/prices/dropdown.svg?");
+eval("module.exports = __webpack_require__.p + \"b43b1a148b128ce5711b.svg\";\n\n//# sourceURL=webpack://web-core-build/./dist/assets/prices/dropdown.svg?");
 
 /***/ }),
 
@@ -496,7 +496,7 @@ eval("module.exports = __webpack_require__.p + \"1acef0d8726cc778d36d.svg\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"2b186550e0ec177d8eec.svg\";\n\n//# sourceURL=webpack://web-core-build/./dist/assets/prices/line.svg?");
+eval("module.exports = __webpack_require__.p + \"2ce566d15c1702d468d9.svg\";\n\n//# sourceURL=webpack://web-core-build/./dist/assets/prices/line.svg?");
 
 /***/ }),
 
@@ -507,7 +507,7 @@ eval("module.exports = __webpack_require__.p + \"2b186550e0ec177d8eec.svg\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"7186507fd3a99447fcd8.svg\";\n\n//# sourceURL=webpack://web-core-build/./src/assets/images/header/call.svg?");
+eval("module.exports = __webpack_require__.p + \"a28f84d657fbea487336.svg\";\n\n//# sourceURL=webpack://web-core-build/./src/assets/images/header/call.svg?");
 
 /***/ }),
 
@@ -518,7 +518,7 @@ eval("module.exports = __webpack_require__.p + \"7186507fd3a99447fcd8.svg\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"694e11ad547dc28514d1.svg\";\n\n//# sourceURL=webpack://web-core-build/./src/assets/images/header/chat.svg?");
+eval("module.exports = __webpack_require__.p + \"b90495a6685d94d1c0f4.svg\";\n\n//# sourceURL=webpack://web-core-build/./src/assets/images/header/chat.svg?");
 
 /***/ }),
 
@@ -529,7 +529,7 @@ eval("module.exports = __webpack_require__.p + \"694e11ad547dc28514d1.svg\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"498f048bda889e1c191c.svg\";\n\n//# sourceURL=webpack://web-core-build/./src/assets/images/header/checkstatus.svg?");
+eval("module.exports = __webpack_require__.p + \"4a7da2a786f877a473dd.svg\";\n\n//# sourceURL=webpack://web-core-build/./src/assets/images/header/checkstatus.svg?");
 
 /***/ }),
 
@@ -540,7 +540,7 @@ eval("module.exports = __webpack_require__.p + \"498f048bda889e1c191c.svg\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"c25d0fa6ccfd708899f7.svg\";\n\n//# sourceURL=webpack://web-core-build/./src/assets/images/header/menu.svg?");
+eval("module.exports = __webpack_require__.p + \"280270d4ebd2aeff2fc2.svg\";\n\n//# sourceURL=webpack://web-core-build/./src/assets/images/header/menu.svg?");
 
 /***/ }),
 
@@ -551,7 +551,7 @@ eval("module.exports = __webpack_require__.p + \"c25d0fa6ccfd708899f7.svg\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"74857a143041264b597f.svg\";\n\n//# sourceURL=webpack://web-core-build/./src/assets/images/header/profile.svg?");
+eval("module.exports = __webpack_require__.p + \"ae85981350f2d871efc0.svg\";\n\n//# sourceURL=webpack://web-core-build/./src/assets/images/header/profile.svg?");
 
 /***/ }),
 
@@ -562,7 +562,7 @@ eval("module.exports = __webpack_require__.p + \"74857a143041264b597f.svg\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"0e897100802b427aae01.svg\";\n\n//# sourceURL=webpack://web-core-build/./src/assets/images/header/repair.svg?");
+eval("module.exports = __webpack_require__.p + \"2f17fb686448b54d2818.svg\";\n\n//# sourceURL=webpack://web-core-build/./src/assets/images/header/repair.svg?");
 
 /***/ }),
 
@@ -573,7 +573,7 @@ eval("module.exports = __webpack_require__.p + \"0e897100802b427aae01.svg\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"ef683bf3ea20fcdc955e.svg\";\n\n//# sourceURL=webpack://web-core-build/./src/assets/images/main/arrows.svg?");
+eval("module.exports = __webpack_require__.p + \"d11d607d2acc71c45d35.svg\";\n\n//# sourceURL=webpack://web-core-build/./src/assets/images/main/arrows.svg?");
 
 /***/ }),
 
