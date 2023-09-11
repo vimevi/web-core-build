@@ -1,0 +1,490 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+/* Мобильные устройства игнорировали overflowX у body,
+пришлось добавить так же к html */
+body,
+html {
+	font-family: TT Lakes;
+	min-width: 320px;
+	overflow-x: hidden;
+	position: relative; /* Данное правило добавлено для того чтобы блюр работал по всей высоте  */
+}
+/* .outside-wrapper {
+	display: flex;
+	position: relative;
+} */
+
+.container {
+	padding: 0 16px;
+}
+
+.header {
+	border-bottom: 1px solid #d9fff5;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+	background-color: transparent;
+	transition: all 0.3s;
+}
+button:hover {
+	opacity: 0.8;
+}
+
+#blurBackgroundModal,
+#blurBackgroundSideBar {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	backdrop-filter: blur(5px);
+	z-index: 14;
+	filter: grayscale(80%);
+}
+#blurBackgroundSideBar {
+	z-index: 12;
+}
+.header__inner {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	min-height: 88px;
+	justify-content: space-between;
+}
+.main__info {
+	margin-bottom: 24px;
+}
+/* nav который не виден на экране 320px */
+
+.header__contact {
+	display: none;
+
+	gap: 16px;
+}
+/* nav который виден на экране 320px */
+.support-top {
+	display: flex;
+	gap: 16px;
+}
+
+/* Главный блок */
+
+.main {
+	position: relative;
+	background-color: #f8f8f8;
+}
+
+.logo {
+	padding-left: 0;
+	/* margin-right: auto; */
+	transition: filter 0.1s;
+}
+.logo:hover {
+	filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+}
+
+/* Отрисовка линии слева от заголовка */
+
+.line::after {
+	content: '';
+	height: 40px;
+	width: 8px;
+	background-color: #41f6d7;
+	position: absolute;
+	left: -4px;
+	border-radius: 4px;
+	top: 24px;
+	z-index: 5;
+}
+
+/* Блюр в правом краю навигационного меню */
+.main__info-wrapper {
+	flex-basis: 50%;
+	padding: 0 16px;
+}
+
+.blur-img {
+	position: absolute;
+	right: 0;
+	top: 80px;
+}
+.main__info {
+	padding-top: 24px;
+}
+.support-top--size-l {
+	display: none;
+}
+.svg {
+	width: 40px;
+	height: 40px;
+}
+
+.menu-svg {
+	background-image: url(/assets/images/header/menu.svg);
+}
+
+.call-svg {
+	background-image: url(/assets/images/header/call.svg);
+}
+.chat-svg {
+	background-image: url(/assets/images/header/chat.svg);
+}
+.profile-svg {
+	margin-right: 8px;
+	background-image: url(/assets/images/header/profile.svg);
+}
+.repair-svg {
+	background-image: url(/images/header/repair.svg);
+	margin-left: 8px;
+}
+.checkout-svg {
+	background-image: url(/images/header/checkstatus.svg);
+}
+.main__title {
+	font-size: 28px;
+	margin-bottom: 24px;
+	font-weight: 700;
+	line-height: 40px;
+	padding-top: 24px;
+	padding-left: 16px;
+	padding-left: 16px;
+	display: flex;
+	overflow-x: auto;
+	white-space: nowrap; /* Предотвращает перенос элементов на новую строку */
+}
+
+/* Скрытое поле "Отзывы" для маленьких экранов */
+
+.main__references--size-l {
+	display: none;
+	color: rgba(126, 126, 130, 1);
+	padding-left: 8px;
+	padding-top: 15px;
+	transition: ease 0.3s;
+}
+
+.main__menu {
+	padding-left: 16px;
+	display: flex;
+	overflow-x: auto;
+	white-space: nowrap;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+.main__menu::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+}
+
+/* .main__menu {
+	-ms-overflow-style: none;
+} */
+
+.main__menu-item {
+	padding: 8px 9px 9px 16px;
+	border-radius: 5px;
+	color: #7e7e82;
+	line-height: 24px;
+	border: 2px solid transparent; /* Этот параметр добавлен для того чтобы изображение не дёргалось  */
+	transition: all 0.3s;
+}
+
+.main__menu-item--active {
+	border: 2px solid #b8ffec;
+	background-color: #fff;
+}
+/* .main__img {
+	padding-bottom: 40px;
+	transform: translateX(-16px);
+	width: 100vw;
+} */
+
+.header__support {
+	display: flex;
+	gap: 16px;
+}
+
+.header__div {
+	margin-left: auto;
+	height: 32px;
+	width: 2px;
+	border-radius: 1px;
+	background-color: rgba(234, 234, 234, 1);
+}
+
+.header__div:nth-child(2) {
+	display: none;
+}
+
+.header__div:last-of-type {
+	margin: 0 0 4px 0;
+}
+
+.support-top__text {
+	font-weight: 500;
+}
+
+.support-top__item:hover {
+	opacity: 0.7;
+}
+
+.main__menu-item:hover {
+	border: 2px solid #b8ffec;
+	background-color: #fff;
+}
+
+.main__more-text--size-m {
+	display: none;
+}
+
+.more-btn-text {
+	border: 1px solid transparent;
+	display: flex;
+	font-family: TT Lakes;
+	font-weight: 500;
+	padding: 16px 16px 16px 0;
+	display: flex;
+	align-items: center;
+	transition: ease 0.3s;
+	padding-left: 25px;
+	position: relative;
+}
+
+.more-btn-text span::before {
+	content: '';
+	background-image: url(/assets/images/main/arrows.svg);
+	position: absolute;
+	left: 7px;
+	top: 18px;
+	width: 7.5px;
+	height: 10.5px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: transform 0.3s;
+}
+.more-btn---rotate span::before {
+	transform: rotate(180deg);
+}
+
+.more-btn-text:active {
+	transform: translateY(5px);
+}
+
+.main__btn-arrows {
+	padding: 7px 8px 6px;
+}
+
+.more-btn-text p {
+	padding-left: 8px;
+}
+
+.main__text {
+	line-height: 18px;
+	font-size: 14px;
+	color: #1b1c21;
+	letter-spacing: 0.2px;
+	margin-bottom: 1em;
+}
+.more-btn-text---rotate span::before {
+	transform: rotate(180deg);
+}
+.main__picture {
+	width: 100%;
+	height: 100%;
+}
+.main__text-visible {
+	display: block;
+}
+@media (max-width: 1440px) {
+	aside {
+		display: none;
+	}
+}
+
+@media (min-width: 768px) {
+	body {
+		overflow-x: visible;
+	}
+	.container .main__img {
+		position: relative;
+	}
+	.logo {
+		padding-left: 12px;
+	}
+	.header__div {
+		margin-left: 0;
+	}
+
+	.header__contact {
+		display: flex;
+		margin-left: auto;
+	}
+
+	.header__inner {
+		justify-content: normal;
+	}
+
+	.header__div:first-of-type {
+		display: block;
+	}
+
+	.main__img {
+		display: block;
+		flex-basis: 50%;
+	}
+
+	/* .main__img--noframes {
+		display: none;
+	} */
+	.main__picture {
+		border-radius: 5px;
+	}
+
+	.main__info {
+		display: flex;
+		align-items: flex-start;
+		padding: 32px 24px 30px 24px;
+		margin: 0;
+	}
+
+	.main__info-wrapper {
+		flex-basis: 50%;
+		padding: 0;
+	}
+
+	.main__text {
+		line-height: 20px;
+		padding-right: 48px;
+	}
+
+	.container {
+		padding: 0 24px;
+	}
+
+	.main__more-text--size-m {
+		padding-top: 1em;
+		display: block;
+		max-height: 4em;
+		overflow-y: hidden;
+	}
+	.main__more-text--size-m:last-of-type {
+		max-height: auto;
+	}
+}
+
+@media (min-width: 1120px) {
+	body {
+		display: flex;
+		justify-content: center;
+	}
+	.logo {
+		padding-left: 0px;
+	}
+	.wrapper {
+		max-width: 1120px;
+		position: relative;
+	}
+
+	.support-top--size-l {
+		display: block;
+	}
+
+	.main__menu {
+		gap: 0 12px;
+		flex-wrap: wrap;
+	}
+
+	.main__more-text--size-m {
+		padding-top: 1em;
+		display: block;
+		height: auto;
+	}
+
+	.header {
+		display: none;
+	}
+
+	.main__references--size-l {
+		display: block;
+	}
+
+	.main__references--size-l:hover {
+		transform: translateX(5px);
+	}
+
+	/* Позиционирование оставшегося от Header блока */
+
+	.support-top__item {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		position: absolute;
+		z-index: 1;
+		right: 0;
+		top: 42px;
+		transition: all 0.3s;
+	}
+	.support-top__vector {
+		width: 40px;
+		height: 40px;
+	}
+	.left-item .support-top__vector {
+		background-image: url(/assets/images/header/repair.svg);
+	}
+	.right-item .support-top__vector {
+		background-image: url(/assets/images/header/checkstatus.svg);
+	}
+
+	/* Позиционирование кнопки заявки */
+
+	.support-top__item:first-child {
+		right: 230px;
+	}
+
+	/* Позиционирование кнопки статуса ремонта */
+
+	.right-item {
+		right: 32px;
+	}
+
+	.main__title {
+		margin-bottom: 8px;
+	}
+
+	/* Покраска верхней полоски */
+
+	.wrapper {
+		padding-top: 18px;
+		background-color: rgba(248, 248, 248, 1);
+	}
+
+	.main__info {
+		justify-content: space-between;
+	}
+	.main__text-visible {
+		display: block;
+	}
+	@media (min-width: 1440px) {
+		body {
+			max-width: 1440px;
+			margin: 0 auto;
+		}
+	}
+}

@@ -1,0 +1,212 @@
+@charset "UTF-8";
+.prices__servie-name::before, .prices__service-price::before, .prices__service-time::before {
+  position: absolute;
+  top: 20px;
+  color: #7e7e82; }
+
+.prices {
+  font-size: 14px;
+  line-height: 18px; }
+  .prices__wrapper {
+    background-color: #f8f8f8;
+    padding: 24px 8px; }
+  .prices__items {
+    display: flex;
+    min-width: 0; }
+  .prices__item {
+    background-color: white;
+    max-width: 260px;
+    height: 200px;
+    border-radius: 10px; }
+    .prices__item:first-child {
+      background-color: #f8f8f8;
+      display: none; }
+  .prices__link {
+    width: 260px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 6px 16px;
+    transition: opacity 0.4s; }
+    .prices__link span {
+      padding-top: 38px; }
+    .prices__link__service-btn {
+      position: absolute; }
+    .prices__link:hover {
+      opacity: 0.7; }
+    .prices__link--header span {
+      color: #7e7e82; }
+  .prices li__item:first-of-type {
+    background-color: #f8f8f8; }
+  .prices__servie-name {
+    position: relative;
+    grid-column: 1;
+    /* Размещаем в первом столбце */ }
+    .prices__servie-name::before {
+      content: 'Ремонтные услуги'; }
+  .prices__service-price {
+    text-align: left;
+    /* Выравнивание текста по центру во втором столбце */
+    grid-column: 2;
+    /* Размещаем во втором столбце */
+    position: relative; }
+    .prices__service-price::before {
+      content: 'Цена'; }
+  .prices__service-time {
+    text-align-last: left;
+    position: relative; }
+    .prices__service-time::before {
+      content: 'Срок'; }
+  .prices__service-btn {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    justify-self: end;
+    grid-column: 4;
+    /* Размещаем в третьем столбце */
+    text-align: right;
+    /* Выравнивание текста по правому краю */
+    width: 119px;
+    height: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 16px;
+    background-color: #ff3e79;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    padding: 4px 40px 4px 12px;
+    font-family: TT Lakes; }
+    .prices__service-btn::after {
+      content: '';
+      background-image: url(/assets/images/prices/dropdown.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      position: absolute;
+      width: 8px;
+      height: 10px;
+      top: 10px;
+      right: 18px; }
+  .prices .swiper {
+    height: 284px; }
+
+.prices__info {
+  padding: 16px;
+  line-height: 20px;
+  font-size: 14px;
+  background-color: #f8f8f8; }
+.prices__info-text {
+  width: 80%;
+  margin-bottom: 1em; }
+.prices__feedback {
+  width: 192px;
+  color: #1b1c21;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  display: block; }
+  .prices__feedback::after {
+    content: '';
+    background-image: url(/assets/images/prices/line.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position: absolute;
+    bottom: 4px;
+    right: 70px;
+    width: 6px;
+    height: 10px; }
+  .prices__feedback:hover {
+    opacity: 0.7; }
+
+@media (min-width: 768px) {
+  .prices__wrapper {
+    padding: 24px; }
+    .prices__wrapper ul li:first-of-type:hover {
+      opacity: 1;
+      transform: translateX(0); }
+  .prices__info {
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    padding-bottom: 50px; }
+  .prices__items {
+    display: block; }
+  .prices__info-text {
+    width: 450px;
+    padding-top: 24px;
+    margin-bottom: 16px; }
+  .prices__link {
+    height: auto;
+    padding: 16px;
+    width: 100%;
+    text-decoration: none;
+    color: #333;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 300px 140px auto auto;
+    text-align: left;
+    height: auto;
+    padding: 16px;
+    border-bottom: 1px solid #eaeaea;
+    transition: transform ease-out 0.3s; }
+    .prices__link span {
+      padding-top: 0; }
+      .prices__link span::before {
+        content: ''; }
+    .prices__link:hover {
+      transform: translateX(4px);
+      opacity: 0.9; }
+    .prices__link .first-item {
+      display: block; }
+  .prices__service-price {
+    margin-left: 8px; }
+  .prices__feedback::after {
+    content: '';
+    top: 6px;
+    right: -1px; }
+  .prices__feedback:hover {
+    opacity: 0.7; }
+  .prices__service-btn {
+    position: static; }
+    .prices__service-btn::after {
+      top: 27px;
+      right: 28px; }
+  .prices__feedback {
+    width: 320px; }
+  .prices__item {
+    background-color: white;
+    height: auto;
+    border-radius: 0;
+    min-width: 100%; }
+    .prices__item:first-child {
+      display: block; }
+  .prices .swiper {
+    height: auto; }
+  .prices .swiper-slide {
+    margin-bottom: 0; } }
+@media (min-width: 1120px) {
+  .prices li__item:first-of-type {
+    background-color: #f8f8f8; }
+  .prices__link {
+    grid-template-columns: 520px 180px auto auto; }
+  .prices__servie-name {
+    grid-column: 1;
+    /* Размещаем в первом столбце */ }
+  .prices__service-price {
+    text-align: left;
+    /* Выравнивание текста по центру во втором столбце */
+    grid-column: 2;
+    /* Размещаем во втором столбце */ }
+  .prices__service-time {
+    text-align-last: left; }
+    .prices__service-time--header {
+      margin-right: 216px; }
+  .prices____service-btn {
+    position: static; } }
+
+/*# sourceMappingURL=prices.css.map */
