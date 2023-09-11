@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	mode: 'development',
@@ -15,61 +16,32 @@ module.exports = {
 				test: /\.js$/,
 				exclude: /node_modules/,
 				use: {
-					loader: 'babel-loader', // Если вы используете Babel
-				},
-			},
-		],
-	},
-	module: {
-		rules: [
-			{
-				test: /\.js$/,
-				exclude: /node_modules/,
-				use: {
 					loader: 'babel-loader',
-					// Добавьте Babel loader, если это необходимо
 				},
 			},
 			{
-				test: /\.css$/, // Правило для CSS файлов
-				use: ['style-loader', 'css-loader'],
-			},
-			{
-				test: /\.scss$/, // Применять loader только к файлам .scss
-				use: [
-					'style-loader', // Создает стили из строк JavaScript
-					'css-loader', // Преобразует CSS в JavaScript
-					'sass-loader', // Компилирует Sass в CSS
-				],
-			},
-			{
-				test: /\.(png|jpg|jpeg|gif|svg)$/i,
-				use: [
+				rules: [
 					{
-						loader: 'file-loader',
-						options: {
-							// name: '[name].[ext]', // Имя выходного файла
-							// outputPath: 'images', // Папка для выходных файлов
+						test: /\.js$/,
+						exclude: /node_modules/,
+						use: {
+							loader: 'babel-loader',
 						},
+					},
+					{
+						test: /\.css$/, // Правило для CSS файлов
+						use: ['style-loader', 'css-loader'],
+					},
+					{
+						test: /\.scss$/, // Применять loader только к файлам .scss
+						use: [
+							'style-loader', // Создает стили из строк JavaScript
+							'css-loader', // Преобразует CSS в JavaScript
+							'sass-loader', // Компилирует Sass в CSS
+						],
 					},
 				],
 			},
-			// Правило для обработки изображений с помощью url-loader (опционально)
-			// {
-			// 	test: /\.(png|jpg|jpeg|gif|svg)$/i,
-			// 	loader: 'url-loader',
-			// 	options: {
-			// 		limit: 8192, // Если изображение меньше 8 КБ, оно будет встроено в код как Data URL
-			// 		// name: '[name].[ext]', // Имя выходного файла
-			// 		// outputPath: 'images', // Папка для выходных файлов
-			// 	},
-			// },
-			// Правило для обработки HTML файлов с вставленными изображениями
-			{
-				test: /\.html$/,
-				use: ['html-loader'],
-			},
-			// Другие правила, если есть
 		],
 	},
 	plugins: [
@@ -77,6 +49,14 @@ module.exports = {
 			template: './src/index.html', // Путь к исходному HTML-файлу
 			filename: 'index.html', // Имя файла, который будет создан в папке dist
 			inject: 'body',
+		}),
+		new CopyWebpackPlugin({
+			patterns: [
+				{
+					from: path.resolve(__dirname, './src/assets/images'),
+					to: path.resolve(__dirname, 'dist/assets'),
+				},
+			],
 		}),
 		new CleanWebpackPlugin(),
 	],

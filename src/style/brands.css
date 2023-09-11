@@ -13,7 +13,7 @@
 
 .more-btn span::before {
 	content: '';
-	background-image: url(/assets//images/main/arrows.svg);
+	background-image: url(/dist/assets/main/arrows.svg);
 	position: absolute;
 	left: 7px;
 	top: 18px;
@@ -78,7 +78,7 @@
 	height: 40px;
 	border-radius: 50%;
 	border: 2px solid rgba(255, 62, 121, 1);
-	background: url(/assets/images/brands/dropdowns.svg) no-repeat 55% 50%;
+	background: url(/dist/assets/brands/dropdowns.svg) no-repeat 55% 50%;
 	transition: transform 0.3s ease-out;
 }
 .brands__arrow {
@@ -86,7 +86,7 @@
 	height: 40px;
 	border-radius: 50%;
 	border: 2px solid rgba(255, 62, 121, 1);
-	background: url(/assets/images/brands/dropdowns.svg) no-repeat 55% 50%;
+	background: url(/dist/assets/brands/dropdowns.svg) no-repeat 55% 50%;
 	transition: transform 0.3s ease-out;
 	margin-right: 16px;
 }

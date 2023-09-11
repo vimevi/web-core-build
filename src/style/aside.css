@@ -155,11 +155,11 @@ aside .header {
 }
 
 .burger-svg {
-	background-image: url(/assets/images/aside/burger.svg);
+	background-image: url(/dist/assets/aside/burger.svg);
 }
 
 .search-svg {
-	background-image: url(/assets/images/aside/search.svg);
+	background-image: url(/dist/assets/aside/search.svg);
 }
 @media (min-width: 568px) {
 	.aside {

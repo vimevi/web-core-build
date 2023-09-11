@@ -7,7 +7,7 @@ import './js/swiper-config';
 
 // css imports
 import './style/reset.css';
-import './style/main-1.css';
+import './style/main.css';
 // import './scss/devices.scss';
 import './fonts/fonts.css';
 import './style/brands.css';

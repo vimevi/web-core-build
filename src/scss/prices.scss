@@ -106,7 +106,7 @@ $top-color: rgba(248, 248, 248, 1);
 		font-family: TT Lakes;
 		&::after {
 			content: '';
-			background-image: url(/assets/images/prices/dropdown.svg);
+			background-image: url(/dist/assets/prices/dropdown.svg);
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: 50% 50%;
@@ -144,7 +144,7 @@ $top-color: rgba(248, 248, 248, 1);
 		display: block;
 		&::after {
 			content: '';
-			background-image: url(/assets/images/prices/line.svg);
+			background-image: url(/dist/assets/prices/line.svg);
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: 50% 50%;
