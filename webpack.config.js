@@ -33,12 +33,8 @@ module.exports = {
 						use: ['style-loader', 'css-loader'],
 					},
 					{
-						test: /\.scss$/, // Применять loader только к файлам .scss
-						use: [
-							'style-loader', // Создает стили из строк JavaScript
-							'css-loader', // Преобразует CSS в JavaScript
-							'sass-loader', // Компилирует Sass в CSS
-						],
+						test: /\.scss$/,
+						use: ['style-loader', 'css-loader', 'sass-loader'],
 					},
 				],
 			},
