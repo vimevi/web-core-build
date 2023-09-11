@@ -1,0 +1,290 @@
+$top-color: rgba(248, 248, 248, 1);
+%before-conf {
+	position: absolute;
+	top: 20px;
+	color: rgba(126, 126, 130, 1);
+}
+
+.prices {
+	font-size: 14px;
+	line-height: 18px;
+
+	&__wrapper {
+		background-color: $top-color;
+		padding: 24px 8px;
+	}
+	&__items {
+		display: flex;
+		min-width: 0;
+	}
+	&__item {
+		background-color: rgba(255, 255, 255, 1);
+		max-width: 260px;
+		height: 200px;
+		border-radius: 10px;
+		&:first-child {
+			background-color: rgba(248, 248, 248, 1);
+			display: none;
+		}
+	}
+
+	&__link {
+		width: 260px;
+		height: 200px;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		padding: 6px 16px;
+		transition: opacity 0.4s;
+		span {
+			padding-top: 38px;
+		}
+
+		&__service-btn {
+			position: absolute;
+		}
+		&:hover {
+			opacity: 0.7;
+		}
+		&--header {
+			span {
+				color: rgba(126, 126, 130, 1);
+			}
+		}
+	}
+	li {
+		&__item:first-of-type {
+			background-color: rgba(248, 248, 248, 1);
+		}
+	}
+
+	&__servie-name {
+		position: relative;
+		grid-column: 1; /* Размещаем в первом столбце */
+		&::before {
+			content: 'Ремонтные услуги';
+			@extend %before-conf;
+		}
+	}
+	&__service-price {
+		text-align: left; /* Выравнивание текста по центру во втором столбце */
+		grid-column: 2; /* Размещаем во втором столбце */
+		position: relative;
+
+		&::before {
+			content: 'Цена';
+			@extend %before-conf;
+		}
+	}
+
+	&__service-time {
+		text-align-last: left;
+		position: relative;
+		&::before {
+			content: 'Срок';
+			@extend %before-conf;
+		}
+	}
+	&__service-btn {
+		position: absolute;
+		bottom: 16px;
+		right: 16px;
+		justify-self: end;
+		grid-column: 4; /* Размещаем в третьем столбце */
+		text-align: right; /* Выравнивание текста по правому краю */
+		width: 119px;
+		height: 32px;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: rgba(255, 255, 255, 1);
+		border-radius: 16px;
+		background-color: rgba(255, 62, 121, 1);
+		font-size: 12px;
+		line-height: 24px;
+		letter-spacing: -0.15px;
+		padding: 4px 40px 4px 12px;
+		font-family: TT Lakes;
+		&::after {
+			content: '';
+			background-image: url(/assets/images/prices/dropdown.svg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			position: absolute;
+			width: 8px;
+			height: 10px;
+			top: 10px;
+			right: 18px;
+		}
+	}
+	.swiper {
+		height: 284px;
+	}
+}
+
+.prices {
+	&__info {
+		padding: 16px;
+		line-height: 20px;
+		font-size: 14px;
+		background-color: $top-color;
+	}
+	&__info-text {
+		width: 80%;
+		margin-bottom: 1em;
+	}
+	&__feedback {
+		width: 192px;
+		color: rgba(27, 28, 33, 1);
+		font-size: 16px;
+		font-weight: 500;
+		position: relative;
+		cursor: pointer;
+		transition: opacity 0.3s;
+		display: block;
+		&::after {
+			content: '';
+			background-image: url(/assets/images/prices/line.svg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			position: absolute;
+			bottom: 4px;
+			right: 70px;
+			width: 6px;
+			height: 10px;
+		}
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.prices {
+		&__wrapper {
+			padding: 24px;
+			ul {
+				li {
+					&:first-of-type {
+						&:hover {
+							opacity: 1;
+							transform: translateX(0);
+						}
+					}
+				}
+			}
+		}
+
+		&__info {
+			line-height: 20px;
+			letter-spacing: 0.2px;
+			padding-bottom: 50px;
+		}
+		&__items {
+			display: block;
+		}
+		&__info-text {
+			width: 450px;
+			padding-top: 24px;
+			margin-bottom: 16px;
+		}
+		&__link {
+			height: auto;
+			padding: 16px;
+			width: 100%;
+			text-decoration: none;
+			color: #333;
+			display: grid;
+			align-items: center;
+			grid-template-columns: 300px 140px auto auto;
+			text-align: left;
+			height: auto;
+			padding: 16px;
+			border-bottom: 1px solid rgba(234, 234, 234, 1);
+			transition: transform ease-out 0.3s;
+			span {
+				padding-top: 0;
+				&::before {
+					content: '';
+				}
+			}
+			&:hover {
+				transform: translateX(4px);
+				opacity: 0.9;
+			}
+			.first-item {
+				display: block;
+			}
+		}
+		&__service-price {
+			margin-left: 8px;
+		}
+		&__feedback {
+			&::after {
+				content: '';
+				top: 6px;
+				right: -1px;
+			}
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+		&__service-btn {
+			position: static;
+			&::after {
+				top: 27px;
+				right: 28px;
+			}
+		}
+		&__feedback {
+			width: 320px;
+		}
+		&__item {
+			background-color: rgba(255, 255, 255, 1);
+			height: auto;
+			border-radius: 0;
+			min-width: 100%;
+			&:first-child {
+				display: block;
+			}
+		}
+		.swiper {
+			height: auto;
+		}
+		.swiper-slide {
+			margin-bottom: 0;
+		}
+	}
+}
+@media (min-width: 1120px) {
+	.prices {
+		li {
+			&__item:first-of-type {
+				background-color: rgba(248, 248, 248, 1);
+			}
+		}
+		&__link {
+			grid-template-columns: 520px 180px auto auto;
+		}
+		&__servie-name {
+			grid-column: 1; /* Размещаем в первом столбце */
+		}
+
+		&__service-price {
+			text-align: left; /* Выравнивание текста по центру во втором столбце */
+			grid-column: 2; /* Размещаем во втором столбце */
+		}
+
+		&__service-time {
+			text-align-last: left;
+
+			&--header {
+				margin-right: 216px;
+			}
+		}
+		&____service-btn {
+			position: static;
+		}
+	}
+}

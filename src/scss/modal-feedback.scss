@@ -1,0 +1,171 @@
+$top-border: 1px solid rgba(234, 234, 234, 1);
+$top-color: rgba(255, 62, 121, 1);
+$placeholder-color: rgba(181, 182, 188, 1);
+%placeholder-config {
+	color: $placeholder-color;
+	padding: 12px 0 0 16px;
+	font-size: 16px;
+	font-family: TT Lakes;
+}
+input:focus::placeholder,
+textarea:focus::placeholder {
+	color: transparent; /* Устанавливаем прозрачный цвет плейсхолдера */
+}
+.modal-feedback,
+.modal-call {
+	font-size: 14px;
+	line-height: 16px;
+	display: none;
+	z-index: 15;
+	position: sticky;
+	top: 0;
+	background-color: #fff;
+	min-height: 100vh;
+	&__wrapper {
+		max-height: 100vh;
+	}
+	&__form {
+		z-index: 14;
+		padding: 40px 32px;
+		display: flex;
+		flex-direction: column;
+		textarea {
+			outline: none;
+			margin-bottom: 16px;
+			height: 118px;
+			resize: none;
+			border: $top-border;
+			&::placeholder {
+				@extend %placeholder-config;
+			}
+		}
+		.line {
+			&::after {
+				top: 132px;
+			}
+		}
+		.burger-svg {
+		}
+	}
+	&__one-line {
+		border: $top-border;
+		height: 48px;
+		margin-bottom: 16px;
+		outline: none;
+		&::placeholder {
+			@extend %placeholder-config;
+		}
+	}
+	&__title {
+		padding-top: 30px;
+		font-weight: 900;
+		font-size: 24px;
+		line-height: 32px;
+		margin-bottom: 24px;
+		color: rgba(27, 28, 33, 1);
+	}
+	&__burger {
+		background-image: url(/assets/images/aside/close.svg);
+		width: 40px;
+		height: 40px;
+		z-index: 15;
+	}
+	&__warning {
+		margin-bottom: 20px;
+	}
+	&__btn {
+		position: relative;
+		font-weight: 700;
+		border-radius: 20px;
+		padding: 10px 24px 10px 8px;
+		align-self: flex-end;
+		width: 136px;
+		border: none;
+		color: rgba(255, 255, 255, 1);
+		background-color: $top-color;
+		transition: all 0.3s;
+		cursor: pointer;
+		&::after {
+			background-image: url(/assets/images/prices/dropdown.svg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			position: absolute;
+			width: 8px;
+			height: 10px;
+			top: 10px;
+			right: 18px;
+		}
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}
+
+.burger-svg {
+}
+.warning {
+	font-weight: 500;
+	color: rgba(126, 126, 130, 1);
+	a {
+		color: $top-color;
+		transition: opacity 0.2s;
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.modal-feedback,
+	.modal-call {
+		z-index: 15;
+		position: absolute;
+		right: 0;
+		background-color: rgba(255, 255, 255, 1);
+		&__wrapper {
+			display: flex;
+			justify-content: end;
+		}
+		&__form {
+			width: 376px;
+			border-left: 1px solid rgba(217, 255, 245, 1);
+			background-color: rgba(255, 255, 255, 1);
+			-webkit-box-shadow: -16px 0px 52px rgba(34, 60, 80, 0.08);
+			-moz-box-shadow: -16px 0px 52px rgba(34, 60, 80, 0.08);
+			box-shadow: -16px 0px 52px rgba(34, 60, 80, 0.08);
+			position: relative;
+			min-height: 100vh;
+		}
+		&__burger {
+			position: absolute;
+			left: -72px;
+			top: 36px;
+			&:hover {
+				box-shadow: -16px 0px 32px rgba(34, 60, 80, 0.08);
+			}
+		}
+		&__title {
+			padding-top: 0;
+		}
+		&__one-line {
+		}
+		&__warning {
+		}
+		&__btn {
+		}
+		.line {
+			&::after {
+				top: 36px;
+			}
+		}
+	}
+	.warning {
+	}
+}
+@media (min-width: 1120px) {
+	.modal-feedback,
+	.modal-call {
+		margin-left: auto;
+	}
+}
