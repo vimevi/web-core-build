@@ -136,29 +136,29 @@ button:hover {
 }
 
 .menu-svg {
-	background-image: url(../../src/assets/images/header/menu.svg);
+	background-image: url(/dist/assets/header/menu.svg);
 }
 
 .call-svg {
-	background-image: url(../../src/assets/images/header/call.svg);
+	background-image: url(/dist/assets/header/call.svg);
 }
 
 .chat-svg {
-	background-image: url(../../src/assets/images/header/chat.svg);
+	background-image: url(/dist/assets/header/chat.svg);
 }
 
 .profile-svg {
 	margin-right: 8px;
-	background-image: url(../../src/assets/images/header/profile.svg);
+	background-image: url(/dist/assets/header/profile.svg);
 }
 
 .repair-svg {
-	background-image: url(../../src/assets/images/header/repair.svg);
+	background-image: url(/dist/assets/header/repair.svg);
 	margin-left: 8px;
 }
 
 .checkout-svg {
-	background-image: url(../../src/assets/images/header/checkstatus.svg);
+	background-image: url(/dist/assets/header/checkstatus.svg);
 }
 .main__title {
 	font-size: 28px;

@@ -4,6 +4,8 @@ import Swiper from 'swiper/bundle';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+('use strict');
+
 window.addEventListener('DOMContentLoaded', () => {
 	const resizableSwiper = (breakpoint, swiperClass, swiperSettings) => {
 		let swiper;
