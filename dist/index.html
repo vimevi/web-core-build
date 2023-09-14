@@ -54,10 +54,10 @@
 
 				</nav>
 				<nav class="aside-header__contact">
-					<button class="aside-header__contact-item" id="showModalCall" href="tel:88008908900">
+					<button class="aside-header__contact-item showModalCall" href="tel:88008908900">
 						<div class="call-svg svg"></div>
 					</button>
-					<button class="aside-header__contact-item" id="showModalFeedback">
+					<button class="aside-header__contact-item showModalFeedback">
 						<div class="chat-svg svg"></div>
 					</button>
 					<a class="aside-header__contact-item" href="">
@@ -80,30 +80,32 @@
 		</aside>
 	</div>
 
-	<section class="modal-feedback" id="modal-feedback">
+	<section class="modal-feedback modal-feedback">
 		<div class="modal-feedback__wrapper">
+			<button class="modal-feedback__burger"></button>
 			<form class="modal-feedback__form" action="#" method="post">
-				<button class="modal-feedback__burger"></button>
-
 				<h4 class="modal-feedback__title line">Обратная связь</h4>
-				<input class="modal-feedback__one-line" placeholder="Имя" type="text" name="name" id="name">
-				<input class="modal-feedback__one-line" placeholder="Телефон" type="phone" name="call" id="call">
-				<input class="modal-feedback__one-line" placeholder="Электронная почта" type="email" name="email" id="email">
-				<textarea name="text" placeholder="Сообщение" id="text" cols="30" rows="10"></textarea>
+				<input class="modal-feedback__one-line" placeholder="Имя" type="text" name="name" id="name" required>
+				<input class="modal-feedback__one-line" placeholder="Телефон" type="tel" name="call" id="call" required
+					pattern="\d{10}">
+				<input class="modal-feedback__one-line" placeholder="Электронная почта" type="email" name="email" id="email"
+					required>
+				<textarea name="text" placeholder="Сообщение" id="text" cols="30" rows="10" required></textarea>
 				<p class="modal-feedback__warning warning">Нажимая “отправить”, вы даете согласие на <a href="#"> обработку
 						персональных
 						данных</a> и соглашаетесь с нашей <a href="#">политикой
 						конфиденциальности</a></p>
 				<input class="modal-feedback__btn" type="submit" value="ОТПРАВИТЬ">
 			</form>
+
 		</div>
 	</section>
 	<section class="modal-call">
 		<div class="modal-call__wrapper">
+			<button class="modal-call__burger"></button>
 			<form class="modal-call__form" action="#" method="post">
-				<button class="modal-call__burger"></button>
 				<h4 class="modal-call__title line">Заказать звонок</h4>
-				<input class="modal-call__one-line" placeholder="Телефон" type="phone" name="call" id="call">
+				<input class="modal-call__one-line" placeholder="Телефон" type="phone" name="call" id="call" required>
 				<p class="modal-call__warning warning">Нажимая “отправить”, вы даете согласие на <a href="#"> обработку
 						персональных
 						данных</a> и соглашаетесь с нашей <a href="#">политикой
@@ -112,8 +114,8 @@
 			</form>
 		</div>
 	</section>
-	<div id="blurBackgroundModal"></div>
-	<div id="blurBackgroundSideBar"></div>
+	<div class="blurBackgroundModal"></div>
+	<div class="blurBackgroundSideBar"></div>
 
 	<div class="wrapper">
 		<header class="header">
@@ -128,12 +130,12 @@
 					<div class="header__div"></div>
 					<a class="logo" href="#"> <img class="logo__img" src="../dist/assets/header/logo.svg" alt="logo"> </a>
 					<nav class="header__contact">
-						<a class="header__contact-item" href="tel:88008908900">
+						<button class="header__contact-item showModalCall" href="#">
 							<div class="call-svg svg"></div>
-						</a>
-						<a class="header__contact-item" href="#">
+						</button>
+						<button class="header__contact-item showModalFeedback" href="#">
 							<div class="chat-svg svg"></div>
-						</a>
+						</button>
 						<a class="header__contact-item" href="#">
 							<div class="profile-svg svg"></div>
 						</a>

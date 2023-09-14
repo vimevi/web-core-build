@@ -112,7 +112,18 @@ textarea:focus::placeholder {
 	}
 }
 
-@media (min-width: 768px) {
+@media (min-width: 320px) {
+	.modal-feedback,
+	.modal-call {
+		&__burger {
+			position: absolute;
+			top: 20px;
+			left: 22px;
+		}
+	}
+}
+
+@media (min-width: 440px) {
 	.modal-feedback,
 	.modal-call {
 		z-index: 15;
@@ -151,9 +162,29 @@ textarea:focus::placeholder {
 		}
 	}
 }
+
 @media (min-width: 1120px) {
 	.modal-feedback,
 	.modal-call {
 		margin-left: auto;
+	}
+}
+
+@media (max-width: 468px) {
+	.modal-feedback,
+	.modal-call {
+		&__burger {
+			left: -46px;
+		}
+	}
+}
+@media (max-width: 440px) {
+	.modal-call,
+	.modal-feedback {
+		&__burger {
+			position: absolute;
+			left: 20px;
+			top: 20px;
+		}
 	}
 }

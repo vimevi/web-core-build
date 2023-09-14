@@ -45,19 +45,19 @@ button:hover {
 	opacity: 0.8;
 }
 
-#blurBackgroundModal,
-#blurBackgroundSideBar {
+.blurBackgroundModal,
+.blurBackgroundSideBar {
 	display: none;
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	backdrop-filter: blur(5px);
+	background-color: white;
+	opacity: 0.8;
 	z-index: 14;
-	filter: grayscale(80%);
 }
-#blurBackgroundSideBar {
+.blurBackgroundSideBar {
 	z-index: 12;
 }
 .header__inner {
@@ -134,7 +134,9 @@ button:hover {
 	width: 40px;
 	height: 40px;
 }
-
+.header__contact-item {
+	padding: 0;
+}
 .menu-svg {
 	background-image: url(/dist/assets/header/menu.svg);
 }

@@ -101,7 +101,13 @@ textarea:focus::placeholder {
     .warning a:hover {
       opacity: 0.7; }
 
-@media (min-width: 768px) {
+@media (min-width: 320px) {
+  .modal-feedback__burger,
+  .modal-call__burger {
+    position: absolute;
+    top: 20px;
+    left: 22px; } }
+@media (min-width: 440px) {
   .modal-feedback,
   .modal-call {
     z-index: 15;
@@ -140,5 +146,15 @@ textarea:focus::placeholder {
   .modal-feedback,
   .modal-call {
     margin-left: auto; } }
+@media (max-width: 468px) {
+  .modal-feedback__burger,
+  .modal-call__burger {
+    left: -46px; } }
+@media (max-width: 440px) {
+  .modal-call__burger,
+  .modal-feedback__burger {
+    position: absolute;
+    left: 20px;
+    top: 20px; } }
 
 /*# sourceMappingURL=modal-feedback.css.map */

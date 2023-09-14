@@ -1,7 +1,10 @@
 const showModal = document.querySelector('.header__menu-btn');
 const sideBar = document.querySelector('.aside');
 const closeModal = document.querySelector('.aside-header__burger-btn');
-const blurBackgroundSideBar = document.getElementById('blurBackgroundSideBar');
+const blurBackgroundSideBar = document.querySelector('.blurBackgroundSideBar');
+const body = document.querySelector('body');
+const modal = document.querySelector('.modal-feedback');
+const modalCall = document.querySelector('.modal-call');
 
 let isSideBarVisible = false; // Изначально боковая панель скрыта
 
@@ -15,7 +18,7 @@ const closeModalFun = () => {
 const showSideBar = () => {
 	sideBar.style.display = 'block';
 	sideBar.style.position = 'fixed';
-	sideBar.style.zIndex = '14';
+	sideBar.style.zIndex = '13';
 	blurBackgroundSideBar.style.display = 'block';
 	isSideBarVisible = true;
 };
@@ -30,16 +33,22 @@ showModal.addEventListener('click', function (event) {
 	showSideBar();
 });
 
-document.body.addEventListener('click', function (event) {
-	// Проверяем, был ли клик сделан вне боковой панели
+document.addEventListener('click', function (event) {
+	// Проверяем, был ли клик сделан вне боковой панели, modal и modalCall
 	const screenWidth = window.innerWidth;
 	if (isSideBarVisible && screenWidth <= 1439) {
-		if (event.target !== sideBar && !sideBar.contains(event.target)) {
+		if (
+			event.target !== sideBar &&
+			!sideBar.contains(event.target) &&
+			event.target !== modal &&
+			!modal.contains(event.target) &&
+			event.target !== modalCall &&
+			!modalCall.contains(event.target)
+		) {
 			closeModalFun();
 		}
 	}
 });
-
 // Настройка появления сайдбара при расширении страницы без перезагрузки
 function handleWindowResize() {
 	const screenWidth = window.innerWidth;

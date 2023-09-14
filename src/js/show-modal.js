@@ -1,14 +1,16 @@
 // Находим элементы кнопки и модального окна
-const showModalButton = document.getElementById('showModalFeedback');
-const modal = document.getElementById('modal-feedback');
+
+const showModalButton = document.querySelector('.showModalFeedback');
+const modal = document.querySelector('.modal-feedback');
 const closeModalButton = document.querySelector('.modal-feedback__burger');
 const closeModalCallButton = document.querySelector('.modal-call__burger');
 const body = document.querySelector('body');
-const showModalCallButton = document.getElementById('showModalCall');
+const showModalCallButton = document.querySelector('.showModalCall');
 const modalCall = document.querySelector('.modal-call');
-const blurBackground = document.getElementById('blurBackgroundModal');
+const blurBackground = document.querySelector('.blurBackgroundModal');
 const aside = document.querySelector('.aside');
 const html = document.querySelector('.html');
+
 let IsVisibleModal = false;
 
 const showModalFun = () => {
@@ -80,7 +82,8 @@ showModalCallButton.addEventListener('click', function (event) {
 	showModalCallFun();
 });
 // Закрытие по клику вне зоны контейнера
-document.body.addEventListener('click', function (event) {
+
+document.addEventListener('click', function (event) {
 	if (IsVisibleModal) {
 		if (event.target !== modalCall && !modalCall.contains(event.target)) {
 			hideModalCallfun();
@@ -89,5 +92,25 @@ document.body.addEventListener('click', function (event) {
 		if (event.target !== modal && !modal.contains(event.target)) {
 			hideModalfun();
 		}
+	}
+});
+
+modal.addEventListener('click', function (event) {
+	if (
+		event.target.tagName === 'INPUT' ||
+		event.target.tagName === 'FORM' ||
+		event.target.tagName === 'TEXTAREA' ||
+		event.target.tagName === 'A'
+	) {
+		event.stopPropagation(); // Остановить всплытие события, чтобы оно не достигло document
+	}
+});
+modalCall.addEventListener('click', function (event) {
+	if (
+		event.target.tagName === 'INPUT' ||
+		event.target.tagName === 'FORM' ||
+		event.target.tagName === 'A'
+	) {
+		event.stopPropagation(); // Остановить всплытие события, чтобы оно не достигло document
 	}
 });
