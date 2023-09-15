@@ -40,7 +40,7 @@ textarea:focus::placeholder {
       border: 1px solid #eaeaea; }
     .modal-feedback__form .line::after,
     .modal-call__form .line::after {
-      top: 132px; }
+      top: 66px; }
   .modal-feedback__one-line,
   .modal-call__one-line {
     border: 1px solid #eaeaea;
