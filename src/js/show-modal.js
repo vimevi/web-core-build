@@ -1,11 +1,14 @@
 // Находим элементы кнопки и модального окна
 
 const showModalButton = document.querySelector('.showModalFeedback');
+const showModalButtons = document.querySelectorAll('.showModalFeedback');
+const showModalCallButton = document.querySelector('.showModalCall');
+const showModalCallButtons = document.querySelectorAll('.showModalCall');
+
 const modal = document.querySelector('.modal-feedback');
 const closeModalButton = document.querySelector('.modal-feedback__burger');
 const closeModalCallButton = document.querySelector('.modal-call__burger');
 const body = document.querySelector('body');
-const showModalCallButton = document.querySelector('.showModalCall');
 const modalCall = document.querySelector('.modal-call');
 const blurBackground = document.querySelector('.blurBackgroundModal');
 const aside = document.querySelector('.aside');
@@ -51,6 +54,20 @@ showModalButton.addEventListener('click', function () {
 	// 	aside.style.display = 'none'; // Скрываем aside при ширине экрана <= 1440px
 	// }
 	showModalFun();
+});
+
+showModalButtons.forEach((button) => {
+	button.addEventListener('click', (event) => {
+		event.stopPropagation();
+		showModalFun();
+	});
+});
+
+showModalCallButtons.forEach((button) => {
+	button.addEventListener('click', (event) => {
+		event.stopPropagation();
+		showModalCallFun();
+	});
 });
 
 window.addEventListener('click', function (event) {
