@@ -4,10 +4,8 @@ import Swiper from 'swiper/bundle';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-('use strict');
-
 window.addEventListener('DOMContentLoaded', () => {
-	const resizableSwiper = (breakpoint, swiperClass, swiperSettings) => {
+	const createSwiper = (breakpoint, swiperClass, swiperSettings) => {
 		let swiper;
 
 		breakpoint = window.matchMedia(breakpoint);
@@ -19,7 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			if (breakpoint.matches) {
 				return enableSwiper(swiperClass, swiperSettings);
 			}
-			if (swiper !== undefined) swiper.destroy(true, true);
+			if (swiper !== undefined) swiper.destroy();
 			return;
 		};
 
@@ -27,7 +25,9 @@ window.addEventListener('DOMContentLoaded', () => {
 		checker();
 	};
 
-	resizableSwiper('(max-width: 768px)', '.swiper', {
+	// создание объекта настроек свайпер для более чистого кода
+
+	const swiperSettingsObj = {
 		slidesPerView: 'auto',
 		pagination: {
 			el: '.swiper-pagination',
@@ -35,5 +35,11 @@ window.addEventListener('DOMContentLoaded', () => {
 		},
 		spaceBetween: 16,
 		freeMode: true,
-	});
+	};
+
+	// Исправление бага со swiper.destroy()
+
+	createSwiper('(max-width: 768px)', '.slider-1', swiperSettingsObj);
+	createSwiper('(max-width: 768px)', '.slider-2', swiperSettingsObj);
+	createSwiper('(max-width: 768px)', '.slider-3', swiperSettingsObj);
 });
