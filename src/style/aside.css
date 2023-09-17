@@ -169,7 +169,7 @@ aside .header {
 }
 
 @media (max-width: 768px) {
-	.logo {
+	aside .logo {
 		padding-left: 16px;
 	}
 }
