@@ -17,42 +17,29 @@ const html = document.querySelector('.html');
 let IsVisibleModal = false;
 
 const showModalFun = () => {
-	modal.style.display = 'block';
-	// body.style.overflowY = 'hidden';
-	blurBackground.style.display = 'block';
+	modal.classList.add('modal-feedback--visible');
+	blurBackground.classList.add('blurBackground--visible');
 	console.log('Выполняется');
-	// document.body.style.overflowY = 'hidden';
 	IsVisibleModal = true;
-	modal.style.position = 'fixed';
 };
 const hideModalfun = () => {
-	modal.style.display = 'none';
-	blurBackground.style.display = 'none';
-	// body.style.overflowY = 'visible';
-	// html.style.overflowY = 'visible';
+	modal.classList.remove('modal-feedback--visible');
+	blurBackground.classList.remove('blurBackground--visible');
 	IsVisibleModal = false;
 };
 const showModalCallFun = () => {
-	modalCall.style.display = 'block';
-	// body.style.overflowY = 'hidden';
-	blurBackground.style.display = 'block';
-	// document.body.style.overflowY = 'hidden';
+	modalCall.classList.add('modal-call--visible');
+	blurBackground.classList.add('blurBackground--visible');
 	IsVisibleModal = true;
-	modalCall.style.position = 'fixed';
 };
 const hideModalCallfun = () => {
-	modalCall.style.display = 'none';
-	blurBackground.style.display = 'none';
-	// body.style.overflowY = 'visible';
-	// html.style.overflowY = 'visible';
+	modalCall.classList.remove('modal-call--visible');
+	blurBackground.classList.remove('blurBackground--visible');
 	IsVisibleModal = false;
 };
 
 // Открываем модальное окно при клике на кнопку
 showModalButton.addEventListener('click', function () {
-	// if (window.innerWidth <= 1440) {
-	// 	aside.style.display = 'none'; // Скрываем aside при ширине экрана <= 1440px
-	// }
 	showModalFun();
 });
 
@@ -70,12 +57,6 @@ showModalCallButtons.forEach((button) => {
 	});
 });
 
-window.addEventListener('click', function (event) {
-	if (event.target == modal) {
-		modal.style.display = 'none';
-		body.style.overflowY = 'visible';
-	}
-});
 closeModalCallButton.addEventListener('click', function (event) {
 	event.preventDefault(); // Предотвращаем стандартное поведение кнопки
 	hideModalCallfun();

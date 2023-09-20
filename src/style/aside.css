@@ -161,6 +161,19 @@ aside .header {
 .search-svg {
 	background-image: url(/dist/assets/aside/search.svg);
 }
+
+/* модификаторы */
+
+.aside--visible {
+	display: block;
+	position: fixed;
+	z-index: 13;
+}
+.aside--sticky-mode {
+	display: block;
+	position: sticky;
+	z-index: 0;
+}
 @media (min-width: 568px) {
 	.aside {
 		width: auto;

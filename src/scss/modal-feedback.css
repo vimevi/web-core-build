@@ -156,5 +156,9 @@ textarea:focus::placeholder {
     position: absolute;
     left: 20px;
     top: 20px; } }
+.modal-feedback--visible,
+.modal-call--visible {
+  display: block;
+  position: fixed; }
 
 /*# sourceMappingURL=modal-feedback.css.map */

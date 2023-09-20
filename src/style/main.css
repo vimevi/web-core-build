@@ -395,6 +395,15 @@ button:hover {
 	}
 }
 
+/* модификаторы --visible */
+
+.blurBackground--visible {
+	display: block;
+}
+.blurBackgroundSideBar--visible {
+	display: block;
+}
+
 @media (min-width: 1120px) {
 	body {
 		display: flex;

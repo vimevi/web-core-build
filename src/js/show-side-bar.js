@@ -8,19 +8,16 @@ const modalCall = document.querySelector('.modal-call');
 
 let isSideBarVisible = false; // Изначально боковая панель скрыта
 
-const closeModalFun = () => {
-	sideBar.style.display = 'none';
-	blurBackgroundSideBar.style.display = 'none';
-	document.body.style.overflowY = 'visible';
-	isSideBarVisible = false;
+const showSideBar = () => {
+	sideBar.classList.add('aside--visible');
+	blurBackgroundSideBar.classList.add('blurBackgroundSideBar--visible');
+	isSideBarVisible = true;
 };
 
-const showSideBar = () => {
-	sideBar.style.display = 'block';
-	sideBar.style.position = 'fixed';
-	sideBar.style.zIndex = '13';
-	blurBackgroundSideBar.style.display = 'block';
-	isSideBarVisible = true;
+const closeModalFun = () => {
+	sideBar.classList.remove('aside--visible');
+	blurBackgroundSideBar.classList.remove('blurBackgroundSideBar--visible');
+	isSideBarVisible = false;
 };
 
 closeModal.addEventListener('click', function (event) {
@@ -54,11 +51,9 @@ function handleWindowResize() {
 	const screenWidth = window.innerWidth;
 
 	if (screenWidth >= 1440) {
-		sideBar.style.display = 'block';
-		sideBar.style.position = 'sticky';
-		sideBar.style.zIndex = '0';
+		sideBar.classList.add('aside--sticky-mode');
 	} else {
-		closeModalFun();
+		sideBar.classList.remove('aside--sticky-mode');
 	}
 }
 

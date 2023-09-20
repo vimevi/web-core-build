@@ -188,3 +188,8 @@ textarea:focus::placeholder {
 		}
 	}
 }
+.modal-feedback--visible,
+.modal-call--visible {
+	display: block;
+	position: fixed;
+}
